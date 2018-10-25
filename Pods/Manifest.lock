@@ -1,0 +1,24 @@
+PODS:
+  - AEXML (4.3.3)
+  - HockeySDK-Mac (5.1.0)
+  - Sparkle (1.20.0)
+
+DEPENDENCIES:
+  - AEXML
+  - HockeySDK-Mac
+  - Sparkle
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AEXML
+    - HockeySDK-Mac
+    - Sparkle
+
+SPEC CHECKSUMS:
+  AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
+  HockeySDK-Mac: b313b42665ee33546a861996ad60267f86bfd585
+  Sparkle: 48999e7ee032f05ca05e28451eadf4af8ede6b44
+
+PODFILE CHECKSUM: 7f6eba142e5fcca130c73599337e7281e790b226
+
+COCOAPODS: 1.5.3

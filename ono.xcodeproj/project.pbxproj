@@ -13,9 +13,13 @@
 		577B25A9217F81530013A332 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577B25A8217F81530013A332 /* MainWindowController.swift */; };
 		577B25AE217F90EB0013A332 /* Onoicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577B25AD217F90EB0013A332 /* Onoicons.swift */; };
 		577B25B0217F9B270013A332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577B25AF217F9B270013A332 /* Assets.xcassets */; };
+		5788F4B52181EA39000C5C68 /* xmlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5788F4B42181EA39000C5C68 /* xmlModel.swift */; };
+		5788F4B72181EABB000C5C68 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5788F4B62181EABB000C5C68 /* Item.swift */; };
+		B556AF4E690F250531694D6C /* Pods_ono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653177CC0C6CA0143DDA43C6 /* Pods_ono.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39B6813275AB617EC982417B /* Pods-ono.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ono.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ono/Pods-ono.debug.xcconfig"; sourceTree = "<group>"; };
 		577B2595217F80A90013A332 /* ono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ono.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577B2598217F80A90013A332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577B259A217F80A90013A332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +29,10 @@
 		577B25A8217F81530013A332 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		577B25AD217F90EB0013A332 /* Onoicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onoicons.swift; sourceTree = "<group>"; };
 		577B25AF217F9B270013A332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		5788F4B42181EA39000C5C68 /* xmlModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xmlModel.swift; sourceTree = "<group>"; };
+		5788F4B62181EABB000C5C68 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		653177CC0C6CA0143DDA43C6 /* Pods_ono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF5BA49CBF5C5A9682FC175 /* Pods-ono.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ono.release.xcconfig"; path = "Pods/Target Support Files/Pods-ono/Pods-ono.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B556AF4E690F250531694D6C /* Pods_ono.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FE8C03962A1BB769A365677 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39B6813275AB617EC982417B /* Pods-ono.debug.xcconfig */,
+				7BF5BA49CBF5C5A9682FC175 /* Pods-ono.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3EC61C6E313880D59C8CE8E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				653177CC0C6CA0143DDA43C6 /* Pods_ono.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		577B258C217F80A90013A332 = {
 			isa = PBXGroup;
 			children = (
 				577B2597217F80A90013A332 /* ono */,
 				577B2596217F80A90013A332 /* Products */,
+				2FE8C03962A1BB769A365677 /* Pods */,
+				3EC61C6E313880D59C8CE8E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +117,8 @@
 		577B25AC217F81860013A332 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5788F4B62181EABB000C5C68 /* Item.swift */,
+				5788F4B42181EA39000C5C68 /* xmlModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 577B25A5217F80AA0013A332 /* Build configuration list for PBXNativeTarget "ono" */;
 			buildPhases = (
+				833B01CC830106632A56E213 /* [CP] Check Pods Manifest.lock */,
 				577B2591217F80A90013A332 /* Sources */,
 				577B2592217F80A90013A332 /* Frameworks */,
 				577B2593217F80A90013A332 /* Resources */,
+				E02DC2A4DA0DD9A93AB10B97 /* [CP] Embed Pods Frameworks */,
+				485A67D40F42B4585FB45E60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,14 +196,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		485A67D40F42B4585FB45E60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ono/Pods-ono-resources.sh",
+				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ono/Pods-ono-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		833B01CC830106632A56E213 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ono-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E02DC2A4DA0DD9A93AB10B97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ono/Pods-ono-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework",
+				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework.dSYM",
+				"${PODS_ROOT}/Sparkle/Sparkle.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HockeySDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/HockeySDK.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ono/Pods-ono-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		577B2591217F80A90013A332 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5788F4B72181EABB000C5C68 /* Item.swift in Sources */,
 				577B259B217F80A90013A332 /* ViewController.swift in Sources */,
 				577B25AE217F90EB0013A332 /* Onoicons.swift in Sources */,
 				577B2599217F80A90013A332 /* AppDelegate.swift in Sources */,
+				5788F4B52181EA39000C5C68 /* xmlModel.swift in Sources */,
 				577B25A9217F81530013A332 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,8 +416,10 @@
 		};
 		577B25A6217F80AA0013A332 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B6813275AB617EC982417B /* Pods-ono.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 358WHQF94W;
@@ -318,14 +430,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.purzelbaum.ono;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		577B25A7217F80AA0013A332 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF5BA49CBF5C5A9682FC175 /* Pods-ono.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 358WHQF94W;
@@ -336,6 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.purzelbaum.ono;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
