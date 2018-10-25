@@ -17,6 +17,8 @@ func processXML (result: String) {
     let path = result
     
     let data = try? Data(contentsOf: URL(fileURLWithPath: path))
+    
+    responseArray = []
         
     do {
         let xmlDoc = try AEXMLDocument(xml: data!)
@@ -29,13 +31,18 @@ func processXML (result: String) {
                     let description = line["ProductIdentification"]["PartnerProductIdentification"]["ProductDescription"].value
                     let productTypeCode = line["ProductIdentification"]["PartnerProductIdentification"]["ProductTypeCode"].value
                     let quantity = line["Quantity"].value
+                    let serialNumber = line["ProductIdentification"]["PartnerProductIdentification"]["OrderedProductIdentifier"].value!
                     
                     if (line["TransactionType"].value! == "NEW" || line["TransactionType"].value! == "FMOD")  {
                         if (line["ProductIdentification"]["PartnerProductIdentification"]["ProprietaryProductIdentifier"].value != "5313-HPO" ) {
                             if (line["ProductIdentification"]["PartnerProductIdentification"]["ProductTypeCode"].value != "Software") {
-                            
-                                let header = Item(featureCode: featureCode, quantity: quantity!, desc: description!, header: true, mainLine: false, subLine: false, isHardware: true)
-                                responseArray.append(header)
+                                if serialNumber != "N/A" {
+                                    let header = Item(featureCode: featureCode, quantity: serialNumber, desc: description!, header: true, mainLine: false, subLine: false, isHardware: true)
+                                    responseArray.append(header)
+                                } else {
+                                    let header = Item(featureCode: featureCode, quantity: quantity!, desc: description!, header: true, mainLine: false, subLine: false, isHardware: true)
+                                    responseArray.append(header)
+                                }
                             } else {
                                 if (productTypeCode == "Hardware") {
                                     let mainLine = Item(featureCode: featureCode, quantity: quantity!, desc: description!, header: false, mainLine: true, subLine: false, isHardware: true)
