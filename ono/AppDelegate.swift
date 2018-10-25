@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import HockeySDK
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,7 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        BITHockeyManager.shared().configure(withIdentifier: "5d69b34194024f6a8da34621598d009e")
+        // Do some additional configuration if needed here
+        BITHockeyManager.shared().start()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

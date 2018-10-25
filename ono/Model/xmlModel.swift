@@ -9,8 +9,8 @@
 import Foundation
 import AEXML
 
-var lineArray: [Item] = []
-var lineDictionary: [Item: [Item]] = [:]
+var responseArray: [Item] = []
+var responseDictionary: [Item: [Item]] = [:]
 
 func processXML (result: String) {
     
@@ -35,19 +35,19 @@ func processXML (result: String) {
                             if (line["ProductIdentification"]["PartnerProductIdentification"]["ProductTypeCode"].value != "Software") {
                             
                                 let header = Item(featureCode: featureCode, quantity: quantity!, desc: description!, header: true, mainLine: false, subLine: false, isHardware: true)
-                                lineArray.append(header)
+                                responseArray.append(header)
                             } else {
                                 if (productTypeCode == "Hardware") {
                                     let mainLine = Item(featureCode: featureCode, quantity: quantity!, desc: description!, header: false, mainLine: true, subLine: false, isHardware: true)
-                                    lineArray.append(mainLine)
+                                    responseArray.append(mainLine)
                                 } else {
                                     let mainLine = Item(featureCode: featureCode, quantity: quantity!, desc: description!, header: false, mainLine: true, subLine: false, isHardware: false)
-                                    lineArray.append(mainLine)
+                                    responseArray.append(mainLine)
                             }
                         }
                         } else {
                             let mainLine = Item(featureCode: featureCode, quantity: quantity!, desc: description!, header: false, mainLine: true, subLine: false, isHardware: true)
-                            lineArray.append(mainLine)
+                            responseArray.append(mainLine)
                         }
                     }
                 }
@@ -63,10 +63,10 @@ func processXML (result: String) {
                             if(subline["TransactionType"].value! == "ADD") {
                                 if (productTypeCode == "Hardware") {
                                     let subLine = Item(featureCode: featureCode!, quantity: quantity!, desc: description!, header: false, mainLine: false, subLine: true, isHardware: true)
-                                    lineArray.append(subLine)
+                                    responseArray.append(subLine)
                                 } else {
                                     let subLine = Item(featureCode: featureCode!, quantity: quantity!, desc: description!, header: false, mainLine: false, subLine: true, isHardware: false)
-                                    lineArray.append(subLine)
+                                    responseArray.append(subLine)
                                 }
                             }
                         }

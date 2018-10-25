@@ -80,6 +80,7 @@ extension MainWindowController: NSToolbarDelegate {
             group.view = segmented
             
             toolbarItem = group
+            toolbarItem.action = #selector(ViewController.buttonPressed(sender:))
         } else {
             toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
             toolbarItem.label = infoDictionary["title"]!

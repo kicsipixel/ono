@@ -12,9 +12,11 @@
 		577B25A0217F80AA0013A332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577B259E217F80AA0013A332 /* Main.storyboard */; };
 		577B25A9217F81530013A332 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577B25A8217F81530013A332 /* MainWindowController.swift */; };
 		577B25AE217F90EB0013A332 /* Onoicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577B25AD217F90EB0013A332 /* Onoicons.swift */; };
-		577B25B0217F9B270013A332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577B25AF217F9B270013A332 /* Assets.xcassets */; };
 		5788F4B52181EA39000C5C68 /* xmlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5788F4B42181EA39000C5C68 /* xmlModel.swift */; };
 		5788F4B72181EABB000C5C68 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5788F4B62181EABB000C5C68 /* Item.swift */; };
+		578B10922181EDE000FD4232 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B10912181EDE000FD4232 /* CustomTableCell.swift */; };
+		57E7681F21824B5A00C144CD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 57E7681E21824B5A00C144CD /* Credits.rtf */; };
+		57E7682121824F6600C144CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E7682021824F6600C144CD /* Images.xcassets */; };
 		B556AF4E690F250531694D6C /* Pods_ono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653177CC0C6CA0143DDA43C6 /* Pods_ono.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +30,11 @@
 		577B25A2217F80AA0013A332 /* ono.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ono.entitlements; sourceTree = "<group>"; };
 		577B25A8217F81530013A332 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		577B25AD217F90EB0013A332 /* Onoicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onoicons.swift; sourceTree = "<group>"; };
-		577B25AF217F9B270013A332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		5788F4B42181EA39000C5C68 /* xmlModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xmlModel.swift; sourceTree = "<group>"; };
 		5788F4B62181EABB000C5C68 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		578B10912181EDE000FD4232 /* CustomTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
+		57E7681E21824B5A00C144CD /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		57E7682021824F6600C144CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		653177CC0C6CA0143DDA43C6 /* Pods_ono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF5BA49CBF5C5A9682FC175 /* Pods-ono.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ono.release.xcconfig"; path = "Pods/Target Support Files/Pods-ono/Pods-ono.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,14 +89,15 @@
 		577B2597217F80A90013A332 /* ono */ = {
 			isa = PBXGroup;
 			children = (
+				57E7681E21824B5A00C144CD /* Credits.rtf */,
 				577B25AC217F81860013A332 /* Model */,
 				577B25AB217F81780013A332 /* View */,
 				577B25AA217F81580013A332 /* Controller */,
 				577B2598217F80A90013A332 /* AppDelegate.swift */,
 				577B259E217F80AA0013A332 /* Main.storyboard */,
-				577B25AF217F9B270013A332 /* Assets.xcassets */,
 				577B25A1217F80AA0013A332 /* Info.plist */,
 				577B25A2217F80AA0013A332 /* ono.entitlements */,
+				57E7682021824F6600C144CD /* Images.xcassets */,
 			);
 			path = ono;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 		577B25AB217F81780013A332 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				578B10912181EDE000FD4232 /* CustomTableCell.swift */,
 				577B25AD217F90EB0013A332 /* Onoicons.swift */,
 			);
 			path = View;
@@ -189,7 +195,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577B25B0217F9B270013A332 /* Assets.xcassets in Resources */,
+				57E7682121824F6600C144CD /* Images.xcassets in Resources */,
+				57E7681F21824B5A00C144CD /* Credits.rtf in Resources */,
 				577B25A0217F80AA0013A332 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +289,7 @@
 				577B2599217F80A90013A332 /* AppDelegate.swift in Sources */,
 				5788F4B52181EA39000C5C68 /* xmlModel.swift in Sources */,
 				577B25A9217F81530013A332 /* MainWindowController.swift in Sources */,
+				578B10922181EDE000FD4232 /* CustomTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
