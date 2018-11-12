@@ -11,6 +11,10 @@ import Cocoa
 class MainWindowController: NSWindowController {
     
     var toolbar: NSToolbar!
+    var inDarkMode: Bool {
+        let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
+        return mode == "Dark"
+    }
     
     let toolbarItems: [[String: String]] = [
         ["title": "group", "icon": "", "identifier": "NavigationGroupToolbarItem"]
@@ -35,7 +39,11 @@ class MainWindowController: NSWindowController {
                 
                 window.titleVisibility = .hidden
                 window.titlebarAppearsTransparent = true
-                window.backgroundColor = .white
+                if inDarkMode {
+                    window.backgroundColor = .black
+                } else {
+                    window.backgroundColor = .white
+                }
                 
                 toolbar = NSToolbar(identifier: "ToolbarIdentifier")
                 toolbar.allowsUserCustomization = false
