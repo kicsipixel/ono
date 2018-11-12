@@ -9,7 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
     @IBOutlet var tableView: NSTableView!
     var path: String = String()
     
@@ -22,7 +22,6 @@ class ViewController: NSViewController {
         
         // Notification center
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.refreshTableView), name: NSNotification.Name(rawValue: "refresh"), object: nil)
-
     }
     
     @objc func refreshTableView() {
@@ -33,13 +32,13 @@ class ViewController: NSViewController {
         
         let dialog = NSOpenPanel()
         
-        dialog.title                                      = "Choose a .xml file";
-        dialog.showsResizeIndicator          = true;
-        dialog.showsHiddenFiles               = false;
-        dialog.canChooseDirectories         = true;
-        dialog.canCreateDirectories           = true;
-        dialog.allowsMultipleSelection      = false;
-        dialog.allowedFileTypes                 = ["xml"];
+        dialog.title                       = "Choose a .xml file";
+        dialog.showsResizeIndicator        = true;
+        dialog.showsHiddenFiles            = false;
+        dialog.canChooseDirectories        = true;
+        dialog.canCreateDirectories        = true;
+        dialog.allowsMultipleSelection     = false;
+        dialog.allowedFileTypes            = ["xml"];
         
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
             let result = dialog.url
