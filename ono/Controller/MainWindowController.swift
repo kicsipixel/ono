@@ -11,9 +11,11 @@ import Cocoa
 class MainWindowController: NSWindowController {
     
     var toolbar: NSToolbar!
-    var inDarkMode: Bool {
-        let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
-        return mode == "Dark"
+    
+    var windowColor = NSColor(named: "WindowColor") {
+        didSet {
+            configureWindowAppearance()
+        }
     }
     
     let toolbarItems: [[String: String]] = [
@@ -37,13 +39,10 @@ class MainWindowController: NSWindowController {
             if let view = window.contentView {
                 view.wantsLayer = true
                 
+                
                 window.titleVisibility = .hidden
                 window.titlebarAppearsTransparent = true
-                if inDarkMode {
-                    window.backgroundColor = .black
-                } else {
-                    window.backgroundColor = .white
-                }
+                window.backgroundColor = windowColor
                 
                 toolbar = NSToolbar(identifier: "ToolbarIdentifier")
                 toolbar.allowsUserCustomization = false
